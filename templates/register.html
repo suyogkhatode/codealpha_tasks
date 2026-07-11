@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f5f5f5;
+        }
+
+        .box{
+            width:400px;
+            margin:60px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#007BFF;
+            color:white;
+            border:none;
+            border-radius:5px;
+        }
+
+        a{
+            text-decoration:none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Create Account</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button>Create Account</button>
+
+</form>
+
+<p>
+
+Already have an account?
+
+<a href="/users/login/">Login</a>
+
+</p>
+
+</div>
+
+</body>
+</html>
